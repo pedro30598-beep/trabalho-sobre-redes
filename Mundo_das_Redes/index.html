@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Projeto escolar sobre redes de computadores, protocolos, endereçamento, equipamentos, diagnóstico e computação em nuvem.">
+  <title>Mundo das Redes | Aprenda e teste seus conhecimentos</title>
+  <link rel="stylesheet" href="estilo.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-tema="escuro">
+  <header class="topo">
+    <div class="limite topo-conteudo">
+      <a class="marca" href="#inicio" aria-label="Mundo das Redes - início">
+        <span class="marca-icone">↔</span>
+        <span>Mundo das <strong>Redes</strong></span>
+      </a>
+      <button id="trocar-tema" class="botao-tema" type="button" aria-label="Trocar tema">
+        <span id="icone-tema" aria-hidden="true">☼</span>
+        <span id="texto-tema">Tema claro</span>
+      </button>
+    </div>
+    <div class="limite abertura" id="inicio">
+      <p class="etiqueta">GUIA DE REDES</p>
+      <h1>Aprenda como os dispositivos <span>se conectam</span></h1>
+      <p class="subtitulo">Entenda os conceitos de redes de computadores com explicações diretas e exemplos práticos.</p>
+      <a class="botao principal" href="#conteudos">Começar a aprender ↓</a>
+    </div>
+    <nav class="navegacao" aria-label="Navegação principal">
+      <div class="limite links">
+        <a href="#fundamentos">Fundamentos</a>
+        <a href="#protocolos">Protocolos</a>
+        <a href="#enderecamento">Endereçamento</a>
+        <a href="#equipamentos">Equipamentos</a>
+        <a href="#diagnostico">Diagnóstico e nuvem</a>
+        <a href="#questionario">Questionário</a>
+        <a href="#fontes">Fontes</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="limite" id="conteudos">
+    <section class="introducao">
+      <div>
+        <p class="etiqueta">ENTENDA NA PRÁTICA</p>
+        <h2>O que é uma rede de computadores?</h2>
+        <p>É a conexão entre dispositivos para compartilhar informações e recursos. A seguir, você vai conhecer os principais conceitos, equipamentos e tecnologias de rede.</p>
+      </div>
+    </section>
+
+    <section class="secao" id="fundamentos">
+      <div class="cabecalho-secao"><span class="numero">01</span><div><p class="etiqueta">PARTE 1</p><h2>Fundamentos e organização de redes</h2></div></div>
+      <article class="painel">
+        <h3>O que é uma rede de computadores?</h3>
+        <p>É a ligação entre dois ou mais dispositivos para trocar informações e compartilhar recursos, como arquivos, impressoras e acesso à internet.</p>
+        <div class="exemplo"><strong>Exemplo do dia a dia:</strong> em uma casa, celular, televisão e computador podem se conectar ao mesmo roteador. Assim, todos conseguem acessar a internet pela mesma rede.</div>
+        <h3>Infraestrutura de rede</h3>
+        <p>É o conjunto de equipamentos, cabos, conectores e espaços que permite a comunicação. Uma escola, por exemplo, pode ter um roteador, switches, pontos de acesso Wi-Fi, cabos e um local onde os equipamentos ficam organizados.</p>
+        <div class="diagrama" role="img" aria-label="Diagrama simples de uma rede escolar">
+          <div class="diagrama-titulo">Exemplo de infraestrutura de uma escola</div>
+          <div class="linha-diagrama">
+            <div class="equipamento internet">Internet</div><span class="conector">↔</span>
+            <div class="equipamento">Roteador</div><span class="conector">↔</span>
+            <div class="equipamento">Switch</div>
+          </div>
+          <div class="ramificacoes"><span>↙</span><span>↓</span><span>↘</span></div>
+          <div class="linha-diagrama tres">
+            <div class="equipamento pequeno">Computadores</div>
+            <div class="equipamento pequeno">Impressora</div>
+            <div class="equipamento pequeno">Ponto Wi-Fi</div>
+          </div>
+        </div>
+        <h3>Cabeamento estruturado</h3>
+        <p>É a organização planejada dos cabos, tomadas e pontos de conexão de um prédio. Essa organização facilita encontrar problemas, fazer mudanças e ampliar a rede. Um cabo muito usado em redes locais é o par trançado, normalmente terminado com conector RJ-45.</p>
+        <div class="desenho-cabo" role="img" aria-label="Ilustração de um cabo de rede com fios coloridos">
+          <div class="cabo"></div><div class="fios"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span>Cabo de rede de par trançado</span>
+        </div>
+        <h3>Topologias de rede</h3>
+        <p>Topologia é a forma como os dispositivos estão conectados. A topologia física mostra a ligação dos equipamentos; a lógica mostra como os dados circulam.</p>
+        <div class="grade-topologias">
+          <div class="topologia">
+            <h4>Estrela</h4>
+            <svg viewBox="0 0 180 125" role="img" aria-label="Topologia estrela">
+              <g stroke="currentColor" stroke-width="2" fill="none"><path d="M90 60 L30 20 M90 60 L150 20 M90 60 L30 100 M90 60 L150 100"/></g>
+              <g fill="#9b6be8"><rect x="70" y="45" width="40" height="30" rx="5"/><rect x="17" y="8" width="26" height="22" rx="4"/><rect x="137" y="8" width="26" height="22" rx="4"/><rect x="17" y="89" width="26" height="22" rx="4"/><rect x="137" y="89" width="26" height="22" rx="4"/></g>
+            </svg>
+            <p>Todos se ligam a um equipamento central, como um switch.</p>
+          </div>
+          <div class="topologia">
+            <h4>Barramento</h4>
+            <svg viewBox="0 0 180 125" role="img" aria-label="Topologia barramento">
+              <path d="M15 63 H165 M35 63 V28 M75 63 V28 M115 63 V28 M155 63 V28" stroke="currentColor" stroke-width="3" fill="none"/>
+              <g fill="#9b6be8"><rect x="23" y="10" width="24" height="18" rx="3"/><rect x="63" y="10" width="24" height="18" rx="3"/><rect x="103" y="10" width="24" height="18" rx="3"/><rect x="143" y="10" width="24" height="18" rx="3"/></g>
+            </svg>
+            <p>Os dispositivos compartilham um cabo principal.</p>
+          </div>
+          <div class="topologia">
+            <h4>Anel</h4>
+            <svg viewBox="0 0 180 125" role="img" aria-label="Topologia anel">
+              <ellipse cx="90" cy="62" rx="55" ry="42" stroke="currentColor" stroke-width="3" fill="none"/>
+              <g fill="#9b6be8"><circle cx="90" cy="20" r="11"/><circle cx="145" cy="62" r="11"/><circle cx="90" cy="104" r="11"/><circle cx="35" cy="62" r="11"/></g>
+            </svg>
+            <p>Os dispositivos formam um caminho fechado.</p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="secao" id="protocolos">
+      <div class="cabecalho-secao"><span class="numero">02</span><div><p class="etiqueta">PARTE 2</p><h2>Protocolos e comunicação</h2></div></div>
+      <article class="painel">
+        <h3>O que são protocolos?</h3>
+        <p>São regras que organizam a comunicação entre dispositivos. É como combinar um idioma e regras para que todos consigam se entender.</p>
+        <h3>Modelo TCP/IP</h3>
+        <p>É um conjunto de protocolos usado na comunicação pela internet. Ele organiza o envio dos dados desde o aplicativo até a rede física.</p>
+        <div class="camadas">
+          <div><strong>Aplicação</strong><span>HTTP, HTTPS, DNS</span></div>
+          <div><strong>Transporte</strong><span>TCP e UDP</span></div>
+          <div><strong>Internet</strong><span>IP</span></div>
+          <div><strong>Acesso à rede</strong><span>Ethernet e Wi-Fi</span></div>
+        </div>
+        <h3>Comparação: TCP e UDP</h3>
+        <div class="tabela-rolagem"><table><thead><tr><th>Característica</th><th>TCP</th><th>UDP</th></tr></thead><tbody>
+          <tr><td>Entrega dos dados</td><td>Verifica a entrega</td><td>Não confirma a entrega da mesma forma</td></tr>
+          <tr><td>Organização</td><td>Controla a ordem dos dados</td><td>Tem menos controles</td></tr>
+          <tr><td>Exemplo de uso</td><td>Carregamento de páginas e arquivos</td><td>Chamadas e transmissões em tempo real</td></tr>
+        </tbody></table></div>
+        <h3>DNS, HTTP, HTTPS e portas</h3>
+        <ul>
+          <li><strong>DNS:</strong> localiza o endereço IP relacionado ao nome de um site.</li>
+          <li><strong>HTTP:</strong> permite a troca de informações entre navegador e servidor.</li>
+          <li><strong>HTTPS:</strong> protege essa comunicação com criptografia.</li>
+          <li><strong>Portas:</strong> identificam serviços em um dispositivo. Como exemplos, HTTP costuma usar a porta 80 e HTTPS a porta 443.</li>
+        </ul>
+        <div class="passos"><div>1. Você digita o endereço do site.</div><b>↓</b><div>2. O DNS ajuda a encontrar o servidor.</div><b>↓</b><div>3. O navegador se comunica usando HTTPS.</div><b>↓</b><div>4. A página aparece na tela.</div></div>
+      </article>
+    </section>
+
+    <section class="secao" id="enderecamento">
+      <div class="cabecalho-secao"><span class="numero">03</span><div><p class="etiqueta">PARTE 3</p><h2>Endereçamento e identificação</h2></div></div>
+      <article class="painel">
+        <h3>Endereço IP</h3>
+        <p>É um endereço usado para identificar um dispositivo em uma rede e permitir que os dados cheguem ao destino correto.</p>
+        <div class="tabela-rolagem"><table><thead><tr><th>Tipo</th><th>Como é escrito</th><th>Exemplo</th></tr></thead><tbody>
+          <tr><td>IPv4</td><td>Quatro números separados por pontos</td><td>192.168.0.10</td></tr>
+          <tr><td>IPv6</td><td>Grupos de números e letras separados por dois-pontos</td><td>2001:db8::1</td></tr>
+        </tbody></table></div>
+        <p>O IPv6 foi criado para oferecer uma quantidade muito maior de endereços disponíveis.</p>
+        <h3>Outros conceitos importantes</h3>
+        <ul>
+          <li><strong>Máscara de rede:</strong> indica qual parte do endereço IP identifica a rede e qual identifica o dispositivo.</li>
+          <li><strong>Gateway:</strong> é a saída para outras redes. Em uma casa, geralmente é o roteador.</li>
+          <li><strong>Endereço MAC:</strong> identificador associado à interface de rede do equipamento.</li>
+          <li><strong>Sub-rede:</strong> divisão de uma rede maior em redes menores.</li>
+        </ul>
+        <div class="exemplo"><strong>Exemplo:</strong> um computador pode usar o IP 192.168.0.10 e ter como gateway o roteador 192.168.0.1. Assim, ele sabe para onde enviar dados destinados a outras redes.</div>
+      </article>
+    </section>
+
+    <section class="secao" id="equipamentos">
+      <div class="cabecalho-secao"><span class="numero">04</span><div><p class="etiqueta">PARTE 4</p><h2>Tecnologias e equipamentos</h2></div></div>
+      <article class="painel">
+        <h3>Tecnologias de conexão</h3>
+        <ul>
+          <li><strong>Ethernet:</strong> tecnologia bastante usada em redes com cabos.</li>
+          <li><strong>Wi-Fi:</strong> permite conectar dispositivos sem fio, usando ondas de rádio.</li>
+          <li><strong>Padrões IEEE:</strong> normas técnicas que ajudam equipamentos de diferentes fabricantes a funcionar juntos. A família 802.11 está relacionada ao Wi-Fi e a 802.3 à Ethernet.</li>
+        </ul>
+        <h3>Equipamentos mais comuns</h3>
+        <div class="grade-equipamentos">
+          <div class="equip-card"><span>↔</span><h4>Switch</h4><p>Conecta vários equipamentos dentro de uma rede local.</p></div>
+          <div class="equip-card"><span>⇄</span><h4>Roteador</h4><p>Encaminha dados entre redes diferentes.</p></div>
+          <div class="equip-card"><span>⌁</span><h4>Ponto de acesso</h4><p>Oferece conexão Wi-Fi aos dispositivos.</p></div>
+          <div class="equip-card"><span>▣</span><h4>Modem</h4><p>Faz a comunicação com o serviço de internet do provedor.</p></div>
+          <div class="equip-card"><span>盾</span><h4>Firewall</h4><p>Controla o tráfego de rede conforme regras de segurança.</p></div>
+        </div>
+        <div class="exemplo"><strong>Exemplo em uma escola:</strong> os computadores do laboratório podem ser ligados a um switch. Um roteador conecta a rede à internet e pontos de acesso oferecem Wi-Fi para alunos e professores.</div>
+      </article>
+    </section>
+
+    <section class="secao" id="diagnostico">
+      <div class="cabecalho-secao"><span class="numero">05</span><div><p class="etiqueta">PARTE 5</p><h2>Diagnóstico de redes e computação em nuvem</h2></div></div>
+      <article class="painel">
+        <h3>Como investigar problemas de conexão?</h3>
+        <p>O diagnóstico de rede ajuda a descobrir por que um dispositivo não consegue se conectar ou acessar um serviço.</p>
+        <div class="comandos">
+          <div><code>ping</code><p>Testa se um destino responde pela rede.</p></div>
+          <div><code>ipconfig</code><p>No Windows, mostra informações como IP, máscara e gateway.</p></div>
+          <div><code>tracert</code><p>No Windows, mostra etapas do caminho até um destino.</p></div>
+        </div>
+        <div class="exemplo"><strong>Exemplo:</strong> se a internet parece não funcionar, o comando <code>ipconfig</code> ajuda a conferir se o computador recebeu um endereço IP. O <code>ping</code> pode testar a comunicação com outro endereço.</div>
+        <h3>O que é computação em nuvem?</h3>
+        <p>É o uso de recursos de tecnologia pela internet, como armazenamento, programas e servidores. Assim, não é necessário manter toda a estrutura no próprio computador.</p>
+        <div class="tabela-rolagem"><table><thead><tr><th>Modelo</th><th>O que oferece</th><th>Exemplo simples</th></tr></thead><tbody>
+          <tr><td>IaaS</td><td>Infraestrutura, como máquinas virtuais e armazenamento</td><td>Alugar um servidor virtual</td></tr>
+          <tr><td>PaaS</td><td>Plataforma para criar e executar programas</td><td>Ambiente on-line para desenvolver aplicações</td></tr>
+          <tr><td>SaaS</td><td>Programa pronto usado pela internet</td><td>E-mail ou editor de documentos on-line</td></tr>
+        </tbody></table></div>
+      </article>
+    </section>
+
+    <section class="secao questionario" id="questionario">
+      <div class="cabecalho-secao"><span class="numero">06</span><div><p class="etiqueta">HORA DE PRATICAR</p><h2>Questionário</h2></div></div>
+      <div class="painel">
+        <p>São 25 perguntas sobre todos os assuntos. Escolha uma alternativa para receber a correção e uma explicação.</p>
+        <div id="area-pergunta">
+          <div class="barra-progresso"><span id="barra"></span></div>
+          <p id="progresso" class="progresso"></p>
+          <h3 id="pergunta"></h3>
+          <div id="alternativas"></div>
+          <p id="retorno" aria-live="polite"></p>
+          <button id="proxima" class="botao principal" disabled>Próxima pergunta</button>
+        </div>
+        <div id="resultado" hidden>
+          <h3>Seu resultado</h3><p id="pontuacao" class="pontuacao"></p>
+          <p id="mensagem-final"></p>
+          <button id="reiniciar" class="botao principal">Refazer questionário</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao" id="fontes">
+      <div class="cabecalho-secao"><span class="numero">07</span><div><p class="etiqueta">PARA SABER MAIS</p><h2>Fontes de consulta</h2></div></div>
+      <div class="painel">
+        <p>As páginas abaixo foram selecionadas para complementar os conceitos apresentados neste trabalho:</p>
+        <ul class="lista-fontes">
+          <li><a href="https://www.cloudflare.com/pt-br/learning/" target="_blank" rel="noopener">Cloudflare — materiais educativos sobre redes e internet.</a></li>
+          <li><a href="https://www.cisco.com/" target="_blank" rel="noopener">Cisco — conteúdos sobre equipamentos e tecnologias de rede.</a></li>
+          <li><a href="https://www.ibm.com/br-pt/topics/cloud-computing" target="_blank" rel="noopener">IBM — explicação sobre computação em nuvem.</a></li>
+          <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTTP" target="_blank" rel="noopener">MDN — documentação sobre HTTP.</a></li>
+          <li><a href="https://www.rfc-editor.org/" target="_blank" rel="noopener">RFC Editor — documentos técnicos e padrões da internet.</a></li>
+        </ul>
+        <p class="nota">Material organizado em linguagem simples para fins educativos. Os exemplos de endereços IP são ilustrativos.</p>
+      </div>
+    </section>
+</main>
+
+  <footer><p>Mundo das Redes • Projeto educativo sobre redes de computadores</p><a href="#inicio">Voltar ao início ↑</a></footer>
+</body>
+</html>
